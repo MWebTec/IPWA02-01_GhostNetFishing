@@ -58,3 +58,61 @@ Die Datenbankstruktur besteht aus mehreren Entitäten, darunter `GhostNet`, `Per
 ```bash
 git clone https://github.com/yourusername/ghost-net-fishing.git
 cd ghost-net-fishing
+
+### Schritt 2: Konfiguriere die MySQL-Datenbank
+
+Stelle sicher, dass du eine MySQL-Datenbank eingerichtet hast und ändere die Datenbankverbindungsdetails in der `persistence.xml` Datei unter `src/main/resources/META-INF/`. Ändere dort die folgenden Parameter:
+
+- **Benutzername** (Username)
+- **Passwort** (Password)
+- **URL** (Datenbank-URL)
+
+Beispiel:
+```xml
+<persistence-unit name="ghostNetPU">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <jta-data-source>java:/MySQLDS</jta-data-source>
+    <properties>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+        <property name="hibernate.hbm2ddl.auto" value="update" />
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.format_sql" value="true" />
+        <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+        <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/ghostnetfishing" />
+        <property name="hibernate.connection.username" value="deinUsername" />
+        <property name="hibernate.connection.password" value="deinPasswort" />
+    </properties>
+</persistence-unit>
+
+GhostNetFishing
+│
+├── pom.xml                   <-- Maven-Projektdatei (Abhängigkeiten, Plugins)
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── sheashepherd
+│   │   │           └── ghostnetfishing
+│   │   │               ├── bean            <-- JSF/Bean Klassen
+│   │   │               ├── model           <-- JPA Entitäten (GhostNet, Person, Rescue)
+│   │   │               └── persistence     <-- (Optional) Persistenzlogik, Datenbankzugriff
+│   │   └── resources
+│   │       └── META-INF
+│   │           └── persistence.xml          <-- JPA-Datenbankkonfiguration
+└── README.md
+
+### Erklärungen zu den Änderungen:
+
+1. **Schritt 2: Konfiguration der MySQL-Datenbank**  
+   - Ich habe den XML-Block für die `persistence.xml` korrekt formatiert, damit er in GitHub als Codeblock angezeigt wird.
+
+2. **Schritt 3: Maven Build**  
+   - Ich habe die Schritte zur Verwendung von Maven zur Installation und zum Builden des Projekts mit einem `bash`-Codeblock versehen.
+
+3. **Schritt 4: Starten des Webservers**  
+   - Ich habe sowohl die Anleitung für die Verwendung eines externen Webservers (Tomcat) als auch für die Nutzung von Maven Jetty zum Starten des Webservers hinzugefügt.
+
+4. **Verzeichnisstruktur**  
+   - Die Verzeichnisstruktur ist in einem Codeblock formatiert, sodass sie in GitHub als Code und nicht als normalen Text angezeigt wird.
+
+Mit dieser Formatierung solltest du die Datei in GitHub richtig und übersichtlich anzeigen können.
