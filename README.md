@@ -103,6 +103,18 @@ Alternativ, wenn du Maven als eingebauten Webserver verwendest, kannst du die An
 mvn jetty:run
 ```
 
+### Schritt 5: Zugriff auf die Web-App
+
+Sobald der Webserver läuft, öffne deinen Webbrowser und navigiere zu:
+http://localhost:8080
+
+### Schritt 6: Fehlerbehebung und Logs
+
+Falls beim Starten des Webservers oder während der Nutzung der Anwendung Probleme auftreten, kannst du die Fehlerprotokolle (Logs) einsehen, um die Ursache zu ermitteln. 
+
+- **Maven-Fehlermeldungen**: Wenn du Maven verwendest, werden Fehler direkt im Terminal angezeigt, wenn ein Befehl fehlschlägt. Diese kannst du zur Fehlerbehebung verwenden.
+- **Tomcat-Logs**: Wenn du Apache Tomcat verwendest, kannst du die Log-Dateien unter dem Verzeichnis `logs` in deinem Tomcat-Server-Installationsordner finden. Sie enthalten detaillierte Informationen zu Fehlern und Problemen während der Ausführung der Anwendung.
+
 # Verzeichnisstruktur
 
 Die Verzeichnisstruktur des Projekts sieht wie folgt aus:
