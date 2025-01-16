@@ -4,10 +4,10 @@ Die Ghost Net Fishing Web-App ist ein fiktives Projekt im Rahmen meines Studiums
 Dieses Projekt stellt eine fiktive Non-Profit-Organisation namens Shea Shepherd dar, die sich der Bekämpfung der Geisternetze im Ozean widmet.
 
 Funktionen
+
 Die Web-App unterstützt die folgenden grundlegenden Funktionen:
 
-Geisternetze melden:
-
+1. Geisternetze melden:
 Meldende Personen können Geisternetze erfassen (anonym oder mit Kontaktdaten).
 Bergung von Geisternetzen:
 
@@ -45,18 +45,21 @@ Installation
 Voraussetzungen
 Java 8 oder höher: Um das Projekt auszuführen, benötigst du eine Java-Umgebung.
 MySQL-Datenbank: Die Web-App verwendet MySQL zur Speicherung von Daten. Stelle sicher, dass du eine MySQL-Datenbank eingerichtet hast.
+
 Schritt 1: Klone das Repository
 bash
-Kopieren
+
 git clone https://github.com/yourusername/ghost-net-fishing.git
 cd ghost-net-fishing
+
 Schritt 2: Konfiguriere die MySQL-Datenbank
 Stelle sicher, dass du eine MySQL-Datenbank eingerichtet hast und ändere die Datenbankverbindungsdetails in der persistence.xml Datei unter src/main/resources/META-INF/ (wie Benutzername, Passwort und URL).
 
 Schritt 3: Baue das Projekt mit Maven
 bash
-Kopieren
+
 mvn clean install
+
 Dies wird die benötigten Abhängigkeiten herunterladen und das Projekt kompilieren.
 
 Schritt 4: Starte den Webserver
@@ -65,8 +68,9 @@ Wenn du einen lokalen Server verwendest (z.B. Apache Tomcat), kopiere das WAR-Fi
 Falls du Maven als eingebauten Webserver verwendest:
 
 bash
-Kopieren
+
 mvn jetty:run
+
 Die Anwendung sollte nun auf http://localhost:8080 verfügbar sein.
 
 Verzeichnisstruktur
@@ -88,9 +92,11 @@ GhostNetFishing
 │   │       └── META-INF
 │   │           └── persistence.xml          <-- JPA-Datenbankkonfiguration
 └── README.md
+
 Entwickleranweisungen
 Datenmodell erweitern: Wenn du neue Entitäten oder Felder hinzufügen möchtest, passe die entsprechenden JPA-Klassen im Ordner model an.
 Beans erweitern: Füge neue Business-Logik oder neue JSF-Managed Beans im Ordner bean hinzu.
 Frontend verbessern: Bearbeite die JSF-Seiten unter src/main/webapp und passe das Design nach Bedarf an.
+
 Lizenz
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Weitere Informationen findest du in der LICENSE Datei.
