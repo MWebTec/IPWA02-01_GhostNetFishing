@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+                                 http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    
+    <!-- Die Persistenz-Einheit definiert die Verbindung zur Datenbank -->
+    <persistence-unit name="ghostnetfishingPU" transaction-type="JTA">
+        <!-- Der Provider ist Hibernate -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- JTA-Datenquelle (für Anwendung in einem Application Server) -->
+        <jta-data-source>jdbc/ghostnetfishing</jta-data-source>
+
+        <!-- Hibernate-spezifische Konfigurationen -->
+        <properties>
+            <!-- Dialekt für MySQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            
+            <!-- Automatische Generierung der Datenbankstruktur (Update: Tabellen werden erstellt/aktualisiert) -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            
+            <!-- Zeige SQL-Abfragen an (hilfreich für Debugging) -->
+            <property name="hibernate.show_sql" value="true" />
+            
+            <!-- Formatiere SQL-Abfragen für bessere Lesbarkeit -->
+            <property name="hibernate.format_sql" value="true" />
+            
+            <!-- Verhindern, dass Hibernate die Sitzung beim Beenden schließt -->
+            <property name="hibernate.cache.use_second_level_cache" value="false" />
+            
+            <!-- Automatische Identitätsgenerierung für primäre Schlüssel -->
+            <property name="hibernate.id.new_generator_mappings" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>

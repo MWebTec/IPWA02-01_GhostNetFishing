@@ -1,0 +1,19 @@
+<h:html>
+    <h:head>
+        <title>Geisternetz melden</title>
+    </h:head>
+    <h:body>
+        <h1>Geisternetz melden</h1>
+        <h:form>
+            <h:outputLabel for="locationLat" value="Latitude" />
+            <h:inputText id="locationLat" value="#{ghostNetBean.ghostNet.locationLat}" />
+            <h:outputLabel for="locationLon" value="Longitude" />
+            <h:inputText id="locationLon" value="#{ghostNetBean.ghostNet.locationLon}" />
+            <h:outputLabel for="sizeEstimate" value="Geschätzte Größe" />
+            <h:inputText id="sizeEstimate" value="#{ghostNetBean.ghostNet.sizeEstimate}" />
+            <h:outputLabel for="status" value="Status" />
+            <h:inputText id="status" value="#{ghostNetBean.ghostNet.status}" />
+            <h:commandButton value="Melden" action="#{ghostNetBean.reportGhostNet}" />
+        </h:form>
+    </h:body>
+</h:html>
