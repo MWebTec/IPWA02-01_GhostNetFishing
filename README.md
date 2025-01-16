@@ -115,6 +115,11 @@ Falls beim Starten des Webservers oder während der Nutzung der Anwendung Proble
 - **Maven-Fehlermeldungen**: Wenn du Maven verwendest, werden Fehler direkt im Terminal angezeigt, wenn ein Befehl fehlschlägt. Diese kannst du zur Fehlerbehebung verwenden.
 - **Tomcat-Logs**: Wenn du Apache Tomcat verwendest, kannst du die Log-Dateien unter dem Verzeichnis `logs` in deinem Tomcat-Server-Installationsordner finden. Sie enthalten detaillierte Informationen zu Fehlern und Problemen während der Ausführung der Anwendung.
 
+/path/to/tomcat/logs/catalina.out
+- **Jetty-Logs**: Wenn du Maven mit Jetty verwendest, werden die Logs direkt im Terminal angezeigt. Du kannst diese Logs ebenfalls nutzen, um Fehler zu diagnostizieren.
+
+Wenn du weiterhin Probleme hast, überprüfe, ob die MySQL-Datenbank ordnungsgemäß läuft und die Verbindung in der `persistence.xml` korrekt konfiguriert ist.
+
 # Verzeichnisstruktur
 
 Die Verzeichnisstruktur des Projekts sieht wie folgt aus:
