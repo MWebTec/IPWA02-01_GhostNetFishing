@@ -58,6 +58,7 @@ Die Datenbankstruktur besteht aus mehreren Entitäten, darunter `GhostNet`, `Per
 ```bash
 git clone https://github.com/yourusername/ghost-net-fishing.git
 cd ghost-net-fishing
+```
 
 ### Schritt 2: Konfiguriere die MySQL-Datenbank
 
@@ -83,6 +84,7 @@ Beispiel:
         <property name="hibernate.connection.password" value="deinPasswort" />
     </properties>
 </persistence-unit>
+```
 
 GhostNetFishing
 │
