@@ -1,4 +1,4 @@
-Ghost Net Fishing Web-App
+<b>Ghost Net Fishing Web-App</b>
 Die Ghost Net Fishing Web-App ist ein fiktives Projekt im Rahmen meines Studiums an der Internationalen Hochschule (IU). Es wurde als Teil einer praxisorientierten Aufgabe entwickelt, um die Meldung und Bergung von Geisternetzen im Meer zu verwalten und zu koordinieren. Geisternetze sind herrenlose Fischernetze, die in den Ozeanen treiben und eine Gefahr für die Meeresumwelt sowie die Fischerei darstellen.
 
 Dieses Projekt stellt eine fiktive Non-Profit-Organisation namens Shea Shepherd dar, die sich der Bekämpfung der Geisternetze im Ozean widmet.
