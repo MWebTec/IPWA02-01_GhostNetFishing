@@ -85,6 +85,9 @@ Beispiel:
     </properties>
 </persistence-unit>
 ```
+# Verzeichnisstruktur
+
+Die Verzeichnisstruktur des Projekts sieht wie folgt aus:
 ```
 GhostNetFishing
 │
