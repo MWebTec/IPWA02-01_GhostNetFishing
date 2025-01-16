@@ -85,7 +85,7 @@ Beispiel:
     </properties>
 </persistence-unit>
 ```
-
+```
 GhostNetFishing
 │
 ├── pom.xml                   <-- Maven-Projektdatei (Abhängigkeiten, Plugins)
@@ -102,6 +102,7 @@ GhostNetFishing
 │   │       └── META-INF
 │   │           └── persistence.xml          <-- JPA-Datenbankkonfiguration
 └── README.md
+```
 
 ### Erklärungen zu den Änderungen:
 
