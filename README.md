@@ -85,9 +85,28 @@ Beispiel:
     </properties>
 </persistence-unit>
 ```
+### Schritt 3: Baue das Projekt mit Maven
+
+Um das Projekt zu bauen, öffne ein Terminal und navigiere zum Projektordner. Führe dann folgenden Befehl aus:
+
+```bash
+mvn clean install
+```
+
+### Schritt 4: Starte den Webserver
+
+Wenn du einen lokalen Server verwendest, wie z.B. **Apache Tomcat**, kopiere das WAR-File in das `webapps`-Verzeichnis deines Tomcat-Servers und starte den Server.
+
+Alternativ, wenn du Maven als eingebauten Webserver verwendest, kannst du die Anwendung direkt mit dem folgenden Befehl starten:
+
+```bash
+mvn jetty:run
+```
+
 # Verzeichnisstruktur
 
 Die Verzeichnisstruktur des Projekts sieht wie folgt aus:
+
 ```
 GhostNetFishing
 │
